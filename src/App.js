@@ -27,6 +27,11 @@ function LeftBar() {
       <a href="https://github.com/sigma-libra" target="_blank" rel="noreferrer">github</a>
       <a href="https://stackoverflow.com/users/8788182/sigma1510" target="_blank" rel="noreferrer">stackoverflow</a>
     </nav>
+    <h2>Languages</h2>
+    <p>English</p>
+    <p>French</p>
+    <p>(Swiss) German</p>
+    <p>Spanish</p>
   </div>)
 }
 
@@ -43,6 +48,11 @@ function RightBar() {
         <li>Reading</li>
       </ul>
       <h1>Skills</h1>
+      <ul>
+        <li>Java</li>
+        <li>Kotlin</li>
+        <li>Go</li>
+      </ul>
       <h1>Passions</h1>
     </div>
   )

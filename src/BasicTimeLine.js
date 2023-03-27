@@ -39,7 +39,7 @@ function MakeTimeLineEntry({ time, description, isLast = false }) {
             {time}
         </TimelineOppositeContent>
         <TimelineSeparator>
-            <TimelineDot />
+            <TimelineDot color="success" />
             {!isLast && <TimelineConnector />}
         </TimelineSeparator>
         <TimelineContent>{description}</TimelineContent>
