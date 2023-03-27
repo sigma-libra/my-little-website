@@ -1,4 +1,6 @@
 import './App.css';
+import BasicTimeline from "./BasicTimeLine";
+
 
 function App() {
   return (
@@ -32,7 +34,14 @@ function RightBar() {
   return (
     <div className="right-section">
       <h1>Curriculum</h1>
+      <BasicTimeline />
       <h1>Hobbies</h1>
+      <ul>
+        <li>Coding</li>
+        <li>Salsa</li>
+        <li>Jogging</li>
+        <li>Reading</li>
+      </ul>
       <h1>Skills</h1>
       <h1>Passions</h1>
     </div>
