@@ -1,5 +1,6 @@
 import './App.css';
 import BasicTimeline from "./BasicTimeLine";
+import KeywordList from "./Keywords";
 
 
 function App() {
@@ -40,7 +41,7 @@ function CurriculumBar() {
   return (
     <div className="curriculum-outer-section" >
       <div className="curriculum-inner-section">
-        <h1>Curriculum</h1>
+        <h2>Curriculum</h2>
         <BasicTimeline />
       </div>
       <img src={require("./photos/epfl.jpg")} alt="epfl_photo" style={{ maxWidth: "100%" }} />
@@ -52,18 +53,9 @@ function SkillsBar() {
   return (
     <div className="skills-section">
       <h1>Skills</h1>
-      <ul>
-        <li>Java</li>
-        <li>Kotlin</li>
-        <li>Go</li>
-      </ul>
+      <KeywordList keywords={["Java", "Kotlin", "Go"]} />
       <h1>Hobbies</h1>
-      <ul>
-        <li>Coding</li>
-        <li>Salsa</li>
-        <li>Jogging</li>
-        <li>Reading</li>
-      </ul>
+      <KeywordList keywords={["Coding", "Reading", "Writing", "Salsa", "Hiking", "Travelling", "Long-distance Running", "Winter Swimming"]} />
       <h1>Passions</h1>
     </div>
   )

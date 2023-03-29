@@ -1,0 +1,8 @@
+.keyword {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.1em;
+    background-color: rgb(204, 240, 204);
+    border-radius: 0.5em;
+    box-shadow: 0 0.1em 0.3em rgba(24, 31, 24, 0.5);
+}
