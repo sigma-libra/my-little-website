@@ -1,5 +1,6 @@
 import './App.css';
 import BasicTimeline from "./BasicTimeLine";
+import ImageCarousel from "./ImageCarrousel";
 import KeywordList from "./Keywords";
 
 
@@ -21,7 +22,7 @@ export default App;
 function ProfileBar() {
   return (<div className="profile-section">
     <h1>Sabrina Kall</h1>
-    <img src={require("./photos/profile_photo.jpg")} height={200} alt="profile_photo" />
+    <img src={require("./images/profile_photo.jpg")} height={200} alt="profile_photo" />
     <h2>Software Engineer</h2>
     <p>Born 10th October 1996</p>
     <nav className="links-container">
@@ -44,7 +45,7 @@ function CurriculumBar() {
         <h2>Curriculum</h2>
         <BasicTimeline />
       </div>
-      <img src={require("./photos/epfl.jpg")} alt="epfl_photo" style={{ maxWidth: "100%" }} />
+      <ImageCarousel />
     </div>
   )
 }
