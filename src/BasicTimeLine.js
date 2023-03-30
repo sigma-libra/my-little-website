@@ -17,7 +17,7 @@ export default function BasicTimeLine() {
         <Timeline
             sx={{
                 [`& .${timelineOppositeContentClasses.root}`]: {
-                    flex: 0.3,
+                    flex: 0.2,
                 },
             }}
         >
