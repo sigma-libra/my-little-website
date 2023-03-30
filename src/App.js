@@ -35,6 +35,11 @@ function ProfileBar() {
     <p>French</p>
     <p>(Swiss) German</p>
     <p>Spanish</p>
+    <h2>Publications</h2>
+    <a href="https://www.scitepress.org/PublicationsDetail.aspx?ID=52RWrB6AVd8=&t=1" target="_blank" rel="noreferrer">Credential Digger</a>
+    <p>Using Federated Learning to teach an AI to recognize passwords.</p>
+    <a href="https://www.epfl.ch/labs/dedis/wp-content/uploads/2020/01/report-2019-1-Sabrina-Kall.pdf" target="_blank" rel="noreferrer">Know-Thy-Neighbor</a>
+    <p>Using message latency to identify malicious nodes in a blockchain.</p>
   </div>)
 }
 

@@ -25,7 +25,7 @@
 
 .curriculum-inner-section {
   text-align: left;
-  padding-left: 50px;
+  padding-left: 20px;
 }
 
 .skills-section {
@@ -41,7 +41,7 @@
   justify-content: center;
 }
 
-.links-container a {
+a {
   margin-right: 5px;
   padding: 5px;
   color: rgb(204, 240, 204);
