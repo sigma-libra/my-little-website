@@ -1,3 +1,4 @@
+import './SkillsBar.css';
 import KeywordList from "./Keywords";
 import SkillTabs from "./SkillTabs";
 

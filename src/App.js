@@ -1,8 +1,7 @@
 import './App.css';
-import BasicTimeline from "./curriculum/BasicTimeLine";
-import ImageCarousel from "./curriculum/ImageCarrousel";
 import ProfileBar from "./profile/ProfileBar";
 import SkillsBar from "./skills/SkillsBar";
+import CurriculumBar from "./curriculum/CurriculumBar";
 
 
 function App() {
@@ -18,16 +17,3 @@ function App() {
 }
 
 export default App;
-
-
-function CurriculumBar() {
-  return (
-    <div className="curriculum-outer-section" >
-      <div className="curriculum-inner-section">
-        <h2>Curriculum</h2>
-        <BasicTimeline />
-      </div>
-      <ImageCarousel />
-    </div>
-  )
-}
