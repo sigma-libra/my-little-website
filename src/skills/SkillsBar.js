@@ -1,6 +1,8 @@
 import './SkillsBar.css';
 import KeywordList from "./Keywords";
 import SkillTabs from "./SkillTabs";
+import Pyramid from "./Pyramid";
+import UnfoldingTabs from "./UnfoldingTabs";
 
 function SkillsBar() {
     return (
@@ -13,14 +15,41 @@ function SkillsBar() {
 export default SkillsBar;
 
 
-const SkillsList = ["Architecture Design", "API Design (REST, Async)", "Database Design",
-    "End-to-end Testing", "DevOps", "Product Integration", "Machine Learning"];
+const SkillsList = [["Fullstack Development"], ["SCRUM", "Cross-Team Collaboration"], ["Product Integration", "Machine Learning", "App Development"], ["Architecture Design", "API Design (REST, Async)", "Database Design",
+    "Testing", "DevOps"]];
 
-const TechStackList = ["Kubernetes", "Helm", "Docker", "AWS",
-    "Java (+ Spring + Junit)", "Kotlin", "Go", "C++", "JavaScript (+ HTML + CSS)",
-    "Python (+ Flask + Pandas)", "Jupyter Notebook", "Pytorch", "Spark", "Hadoop",
-    "Kafka", "Flutter", "React", "SQL (+ Postgres)", "MongoDB", "DynamoDB", "Elasticsearch",
-    "Linux", "Git", "CI/CD Pipelines", "JIRA + Confluence", "SCRUM"];
+
+const TechStackMap = [
+    {
+        title: 'Infrastructure',
+        content: ["Kubernetes", "Helm", "Docker", "AWS", "Kafka"],
+    },
+    {
+        title: 'Backend',
+        content: ["Java (+ Spring)", "Kotlin", "Go", "C++", "Python"],
+    },
+    {
+        title: 'Frontend',
+        content: ["JavaScript", "HTML", "CSS", "React"],
+    },
+    {
+        title: 'Data Science',
+        content: ["Python", "Pandas", "Jupyter Notebook", "Pytorch", "Spark", "Hadoop"],
+    },
+    {
+        title: "App Development",
+        content: ["Flutter"]
+    },
+    {
+        title: "Databases",
+        content: ["SQL", "Postgres", "MongoDB", "DynamoDB", "Elasticsearch", "Kafka"]
+    },
+    {
+        title: "Project Management",
+        content: ["Git", "CI/CI Pipelines", "JIRA", "Confluence"]
+    }
+];
+
 
 const HobbyList = ["Coding", "Reading", "Writing", "Salsa", "Hiking", "Travelling", "Long-distance Running", "Winter Swimming"];
 
@@ -29,11 +58,11 @@ const PassionList = ["Clean Code", "Mentoring"];
 const tabs = [
     {
         label: 'Skills',
-        content: <KeywordList keywords={SkillsList} />
+        content: <Pyramid rows={SkillsList} />
     },
     {
         label: 'Tech Stack',
-        content: <KeywordList keywords={TechStackList} />
+        content: <UnfoldingTabs content={TechStackMap} />
     },
     {
         label: 'Hobbies',

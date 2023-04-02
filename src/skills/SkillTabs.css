@@ -1,0 +1,12 @@
+.tab-buttons.active {
+    color: blue;
+    background-color: brown;
+}
+
+.tab-buttons.inactive {
+    color: blue;
+}
+
+.tab-content {
+    margin-top: 10px;
+}

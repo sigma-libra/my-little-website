@@ -4,10 +4,16 @@ export default function KeywordList({ keywords }) {
     return (
         <div className="keyword-list">
             {keywords.map((keyword) => (
-                <div key={keyword} className="keyword">
-                    {keyword}
-                </div>
+                Keyword(keyword = { keyword })
             ))}
         </div>
     );
+}
+
+export function Keyword({ keyword }) {
+    return (
+        <div key={keyword} className="keyword">
+            {keyword}
+        </div>
+    )
 }

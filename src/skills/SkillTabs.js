@@ -1,3 +1,4 @@
+import './SkillTabs.css';
 import React, { useState } from 'react';
 
 const SkillTabs = (props) => {
@@ -14,7 +15,7 @@ const SkillTabs = (props) => {
                     <button
                         key={index}
                         onClick={() => handleTabClick(index)}
-                        className={index === activeTab ? 'active' : ''}
+                        className={index === activeTab ? 'active' : 'inactive'}
                     >
                         <h1>{tab.label}</h1>
                     </button>

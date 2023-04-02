@@ -2,13 +2,6 @@
   display: flex;
 }
 
-.skills-section {
-  text-align: left;
-  padding-left: 50px;
-  width: 35%;
-  background-color: rgb(103, 156, 103);
-}
-
 .links-container {
   display: flex;
   gap: 10px;
