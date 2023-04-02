@@ -16,7 +16,7 @@ const SkillTabs = (props) => {
                         onClick={() => handleTabClick(index)}
                         className={index === activeTab ? 'active' : ''}
                     >
-                        {tab.label}
+                        <h1>{tab.label}</h1>
                     </button>
                 ))}
             </div>
