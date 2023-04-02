@@ -2,21 +2,6 @@
   display: flex;
 }
 
-.profile-section {
-  text-align: center;
-  width: 25%;
-  background-color: rgb(24, 31, 24);
-  color: white;
-}
-
-
-.profile-section.ul {
-  text-align: left;
-  width: 25%;
-  background-color: rgb(24, 31, 24);
-  color: white;
-}
-
 .curriculum-outer-section {
   text-align: left;
   width: 40%;
