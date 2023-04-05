@@ -8,6 +8,9 @@ function SkillsBar() {
     return (
         <div className="skills-section">
             <SkillTabs tabs={tabs} defaultTab={1} />
+            <div className="skills-photo">
+                <img src={`${process.env.PUBLIC_URL}/assets/images/rose.jpg`} height={200} alt="rose_photo" />
+            </div>
         </div>
     )
 }
@@ -25,11 +28,11 @@ const TechStackMap = [
         content: ["Kubernetes", "Helm", "Docker", "AWS", "Kafka"],
     },
     {
-        title: 'Backend',
+        title: 'Backend Development',
         content: ["Java (+ Spring)", "Kotlin", "Go", "C++", "Python"],
     },
     {
-        title: 'Frontend',
+        title: 'Frontend Development',
         content: ["JavaScript", "HTML", "CSS", "React"],
     },
     {
@@ -37,7 +40,7 @@ const TechStackMap = [
         content: ["Python", "Pandas", "Jupyter Notebook", "Pytorch", "Spark", "Hadoop"],
     },
     {
-        title: "App Development",
+        title: "Mobile Development",
         content: ["Flutter"]
     },
     {
@@ -46,7 +49,7 @@ const TechStackMap = [
     },
     {
         title: "Project Management",
-        content: ["Git", "CI/CI Pipelines", "JIRA", "Confluence"]
+        content: ["Git", "CI/CD Pipelines", "JIRA", "Confluence"]
     }
 ];
 

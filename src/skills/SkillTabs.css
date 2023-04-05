@@ -1,12 +1,15 @@
-.tab-buttons.active {
-    color: blue;
-    background-color: brown;
+.tab-buttons .inactive {
+    background-color: rgb(224, 57, 57);
+    min-width: 25%;
+    border-color: black;
 }
 
-.tab-buttons.inactive {
-    color: blue;
+.tab-buttons .active {
+    background-color: rgb(255, 255, 255);
+    min-width: 25%;
 }
 
 .tab-content {
     margin-top: 10px;
+    padding-left: 50px;
 }

@@ -23,7 +23,7 @@ export default function BasicTimeLine() {
         >
             <MakeTimeLineEntry time={"now"} description={"Tech Lead at IMTF"} />
             <MakeTimeLineEntry time={"August 2021"} description={"Joined IMTF as a Software Engineer"} />
-            <MakeTimeLineEntry time={"2020 - 2021"} description={"Worked at ti&m as a Software Engineer"} />
+            <MakeTimeLineEntry time={"2020 - 2021"} description={"Worked at ti&m as a Software Engineer Consultant"} />
             <MakeTimeLineEntry time={"Spring 2020"} description={"Research Internship at SAP Labs France"} />
             <MakeTimeLineEntry time={"2018 - 2020"} description={"Master's Degree in Computer Science at EPFL"} />
             <MakeTimeLineEntry time={"2018"} description={"Erasmus Year at Vienna University of Technology"} />
@@ -39,7 +39,7 @@ function MakeTimeLineEntry({ time, description, isLast = false }) {
             {time}
         </TimelineOppositeContent>
         <TimelineSeparator>
-            <TimelineDot color="success" />
+            <TimelineDot color="error" />
             {!isLast && <TimelineConnector />}
         </TimelineSeparator>
         <TimelineContent>{description}</TimelineContent>

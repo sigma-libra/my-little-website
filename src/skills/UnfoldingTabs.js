@@ -1,6 +1,5 @@
 import './UnfoldingTabs.css';
 import React, { useState } from 'react';
-import KeywordList from "./Keywords";
 
 export default function UnfoldingTabs({ content }) {
     const [activeTabs, setActiveTabs] = useState([]);
@@ -32,9 +31,9 @@ export default function UnfoldingTabs({ content }) {
     return (
         <div className="unfolding-tabs">
             {content.map((tab, index) => (
-                <div className="tab" key={index}>
+                <div key={index}>
                     <div className="tab-title" onClick={() => toggleTab(index)}>
-                        <div className={`tab ${activeTabs.includes(index) ? 'active' : 'inactive'}`}>{tab.title}</div>
+                        <div className={`${activeTabs.includes(index) ? 'active' : 'inactive'}`}>{tab.title}</div>
                     </div>
                     <DisplayContent index={index} selectedTab={tab} />
                 </div>
