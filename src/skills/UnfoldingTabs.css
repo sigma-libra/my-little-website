@@ -29,6 +29,7 @@
 
 }
 
-ul {
+.unfolding-tabs .tab-content .tech-stack-list {
     list-style-type: square;
+
 }

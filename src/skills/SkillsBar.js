@@ -1,16 +1,14 @@
 import './SkillsBar.css';
 import KeywordList from "./Keywords";
 import SkillTabs from "./SkillTabs";
-import Pyramid from "./Pyramid";
 import UnfoldingTabs from "./UnfoldingTabs";
+import IconList from "./IconList";
+import { FaBrain, FaCertificate, FaClipboard, FaCloud, FaCode, FaCogs, FaDatabase, FaNetworkWired, FaPeopleCarry, FaPhone, FaServer } from 'react-icons/fa';
 
 function SkillsBar() {
     return (
         <div className="skills-section">
             <SkillTabs tabs={tabs} defaultTab={1} />
-            <div className="skills-photo">
-                <img src={`${process.env.PUBLIC_URL}/assets/images/rose.jpg`} height={200} alt="rose_photo" />
-            </div>
         </div>
     )
 }
@@ -18,8 +16,19 @@ function SkillsBar() {
 export default SkillsBar;
 
 
-const SkillsList = [["Fullstack Development"], ["SCRUM", "Cross-Team Collaboration"], ["Product Integration", "Machine Learning", "App Development"], ["Architecture Design", "API Design (REST, Async)", "Database Design",
-    "Testing", "DevOps"]];
+const SkillsList = [
+    [<FaCode key="1" />, "Fullstack Development"],
+    [<FaServer key="7" />, "Architecture Design"],
+    [<FaCloud key="8" />, "API Design (REST, Async)"],
+    [<FaDatabase key="9" />, "Database Design"],
+    [<FaClipboard key="10" />, "Testing"],
+    [<FaCogs key="11" />, "DevOps"],
+    [<FaNetworkWired key="4" />, "Product Integration"],
+    [<FaCertificate key="2" />, "Certified SCRUM Master"],
+    [<FaPeopleCarry key="3" />, "Cross-Team Collaboration"],
+    [<FaBrain key="5" />, "Machine Learning"],
+    [<FaPhone key="6" />, "App Development"],
+];
 
 
 const TechStackMap = [
@@ -54,14 +63,14 @@ const TechStackMap = [
 ];
 
 
-const HobbyList = ["Coding", "Reading", "Writing", "Salsa", "Hiking", "Travelling", "Long-distance Running", "Winter Swimming"];
+const HobbyList = ["Coding", "Reading", "Writing", "Salsa", "Gardening", "Baking", "Hiking", "Long-distance Running", "Winter Swimming", "Travelling"];
 
-const PassionList = ["Clean Code", "Mentoring"];
+const PassionList = ["Clean Code", "Mentoring", "Ancient Civilizations"];
 
 const tabs = [
     {
         label: 'Skills',
-        content: <Pyramid rows={SkillsList} />
+        content: <IconList listItems={SkillsList} />
     },
     {
         label: 'Tech Stack',
