@@ -4,6 +4,7 @@ import SkillTabs from "./SkillTabs";
 import UnfoldingTabs from "./UnfoldingTabs";
 import IconList from "./IconList";
 import { FaBrain, FaCertificate, FaClipboard, FaCloud, FaCode, FaCogs, FaDatabase, FaNetworkWired, FaPeopleCarry, FaPhone, FaServer } from 'react-icons/fa';
+import Flower from "./Flower";
 
 function SkillsBar() {
     return (
@@ -78,7 +79,7 @@ const tabs = [
     },
     {
         label: 'Hobbies',
-        content: <KeywordList keywords={HobbyList} />
+        content: <Flower />
     },
     {
         label: 'Passions',
