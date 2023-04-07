@@ -5,8 +5,8 @@ import ImageCarousel from "./ImageCarrousel";
 function CurriculumBar() {
     return (
         <div className="curriculum-outer-section" >
+            <h2 style={{ textAlign: 'center' }}>Curriculum</h2>
             <div className="curriculum-inner-section">
-                <h2>Curriculum</h2>
                 <BasicTimeline />
             </div>
             <ImageCarousel />

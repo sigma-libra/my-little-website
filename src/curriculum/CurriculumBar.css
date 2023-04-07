@@ -1,7 +1,9 @@
 .curriculum-outer-section {
     text-align: left;
     width: 30%;
+    height: 100vh;
     background-color: rgb(204, 240, 204);
+    overflow: scroll;
 }
 
 .curriculum-inner-section {

@@ -1,6 +1,8 @@
 .profile-section {
     text-align: center;
     width: 25%;
+    height: 100vh;
+    overflow: scroll;
     background-color: rgb(24, 31, 24);
     color: white;
 }
