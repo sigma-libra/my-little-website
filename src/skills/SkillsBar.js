@@ -54,7 +54,7 @@ const TechStackMap = [
 ];
 
 
-const HobbyList = ["Coding", "Reading", "Writing", "Salsa", "Gardening", "Baking", "Hiking", "Long-distance Running", "Winter Swimming", "Travelling"];
+const HobbyList = ["Coding", "Reading", "Writing", "Salsa", "Gardening", "Baking", "Hiking", "Running", "Winter-Swimming", "Travel"];
 
 const PassionKeywords = ['Coding', 'Mentoring', 'Learning'];
 
@@ -69,7 +69,7 @@ const tabs = [
     },
     {
         label: 'Hobbies',
-        content: <KeywordList keywords={HobbyList} />
+        content: <KeywordBubbles keywords={HobbyList} />
     },
     {
         label: 'Passions',
@@ -80,7 +80,7 @@ const tabs = [
 export default function SkillsBar() {
     return (
         <div className="skills-section">
-            <HorizontalTabs tabs={tabs} defaultTab={2} />
+            <HorizontalTabs tabs={tabs} defaultTab={3} />
         </div>
     )
 }

@@ -1,8 +1,12 @@
 .bubbles-container {
     position: relative;
+    display: flex;
     width: 100%;
-    height: 100%;
+    height: 50vh;
+    margin: 30px;
+    animation: orbit 100s linear infinite;
 }
+
 
 .bubble {
     position: absolute;
@@ -11,22 +15,30 @@
     align-items: center;
     width: 100px;
     height: 100px;
-    background-color: #ccc;
+    background-color: rgb(224, 57, 57);
+    color: white;
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    animation: float 5s ease-in-out infinite;
+    border: 5px solid rgb(204, 240, 204);
+    animation: rotate-text 90s linear infinite;
 }
 
-@keyframes float {
-    0% {
-        transform: translate(0, 0);
+@keyframes orbit {
+    from {
+        transform: rotate(0deg);
     }
 
-    50% {
-        transform: translate(0, -20px);
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-text {
+    from {
+        transform: rotate(0);
     }
 
-    100% {
-        transform: translate(0, 0);
+    to {
+        transform: rotate(-360deg);
     }
 }

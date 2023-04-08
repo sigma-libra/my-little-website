@@ -1,13 +1,17 @@
 import React from "react";
-import "./KeywordBubbles.css"; // import CSS file for bubble styling
+import "./KeywordBubbles.css";
 
-// Define a new component for the bubbles
-function Bubble({ keyword }) {
+function Bubble({ keyword, index, total }) {
+  const radius = 150;
+  const angle = (index / total) * 2 * Math.PI;
+  const x = Math.cos(angle) * radius;
+  const y = Math.sin(angle) * radius;
+
   const style = {
-    // Generate random position and transform values
-    top: Math.random() * 80 + "%",
-    left: Math.random() * 80 + "%",
-    transform: `rotate(${Math.random() * 360}deg) scale(${Math.random() + 0.5})`,
+    position: "absolute",
+    left: `calc(50% + ${x}px)`,
+    top: `calc(50% + ${y}px)`,
+    transform: `translate(-50%, -50%)`,
   };
 
   return (
@@ -17,15 +21,18 @@ function Bubble({ keyword }) {
   );
 }
 
-// Define the main component that renders the bubbles
+
+
 function Bubbles({ keywords }) {
   return (
     <div className="bubbles-container">
       {keywords.map((keyword, index) => (
-        <Bubble keyword={keyword} key={index} />
+        <Bubble keyword={keyword} index={index} total={keywords.length} key={index} />
       ))}
     </div>
   );
 }
+
+
 
 export default Bubbles;

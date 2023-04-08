@@ -19,7 +19,6 @@ export default function HorizontalTabs(props) {
                         onClick={() => handleTabClick(index)}
                         className={index === activeTab ? 'active' : 'inactive'}
                         label={tab.label}
-
                     ><h2>{tab.label}</h2></button>
                 ))}
             </div>
