@@ -6,7 +6,6 @@ export default function HorizontalTabs(props) {
     const [activeTab, setActiveTab] = useState(props.defaultTab || 0);
 
     const handleTabClick = (tabIndex) => {
-        console.log("Click");
         setActiveTab(tabIndex);
     };
 

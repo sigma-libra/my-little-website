@@ -1,5 +1,5 @@
 import React from "react";
-import "./KeywordBubbles.css";
+import "./KeywordBubbles.css"; // import CSS file for bubble styling
 
 function Bubble({ keyword, index, total }) {
   const radius = 150;
@@ -16,7 +16,7 @@ function Bubble({ keyword, index, total }) {
 
   return (
     <div className="bubble" style={style}>
-      {keyword}
+      <span>{keyword}</span>
     </div>
   );
 }
