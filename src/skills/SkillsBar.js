@@ -1,6 +1,6 @@
 import './SkillsBar.css';
 import KeywordList from "./hobbies/Keywords";
-import SkillsTabs from "./SkillsTabs";
+import HorizontalTabs from "./HorizontalTabs";
 import UnfoldingTabs from "./stack/UnfoldingTabs";
 import IconList from "./expertise/IconList";
 import { FaBrain, FaCertificate, FaClipboard, FaCloud, FaCode, FaCogs, FaDatabase, FaNetworkWired, FaPeopleCarry, FaPhone, FaServer } from 'react-icons/fa';
@@ -80,7 +80,7 @@ const tabs = [
 export default function SkillsBar() {
     return (
         <div className="skills-section">
-            <SkillsTabs tabs={tabs} defaultTab={2} />
+            <HorizontalTabs tabs={tabs} defaultTab={2} />
         </div>
     )
 }

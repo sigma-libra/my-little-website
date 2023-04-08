@@ -1,7 +1,7 @@
-import './SkillsTabs.css';
+import './HorizontalTabs.css';
 import React, { useState } from 'react';
 
-export default function SkillsTabs(props) {
+export default function HorizontalTabs(props) {
 
     const [activeTab, setActiveTab] = useState(props.defaultTab || 0);
 
