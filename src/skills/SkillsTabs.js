@@ -1,12 +1,14 @@
-import './SkillTabs.css';
+import './SkillsTabs.css';
 import React, { useState } from 'react';
 
-const SkillTabs = (props) => {
+export default function SkillsTabs(props) {
+
     const [activeTab, setActiveTab] = useState(props.defaultTab || 0);
 
     const handleTabClick = (tabIndex) => {
+        console.log("Click");
         setActiveTab(tabIndex);
-    }
+    };
 
     return (
         <div className="tabs">
@@ -27,5 +29,3 @@ const SkillTabs = (props) => {
         </div>
     );
 }
-
-export default SkillTabs;

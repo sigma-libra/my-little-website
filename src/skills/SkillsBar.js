@@ -1,20 +1,10 @@
 import './SkillsBar.css';
-import KeywordList from "./Keywords";
-import SkillTabs from "./SkillTabs";
-import UnfoldingTabs from "./UnfoldingTabs";
-import IconList from "./IconList";
+import KeywordList from "./hobbies/Keywords";
+import SkillsTabs from "./SkillsTabs";
+import UnfoldingTabs from "./stack/UnfoldingTabs";
+import IconList from "./expertise/IconList";
 import { FaBrain, FaCertificate, FaClipboard, FaCloud, FaCode, FaCogs, FaDatabase, FaNetworkWired, FaPeopleCarry, FaPhone, FaServer } from 'react-icons/fa';
-import Flower from "./Flower";
-
-function SkillsBar() {
-    return (
-        <div className="skills-section">
-            <SkillTabs tabs={tabs} defaultTab={1} />
-        </div>
-    )
-}
-
-export default SkillsBar;
+import KeywordBubbles from "./passions/KeywordBubbles";
 
 
 const SkillsList = [
@@ -66,7 +56,7 @@ const TechStackMap = [
 
 const HobbyList = ["Coding", "Reading", "Writing", "Salsa", "Gardening", "Baking", "Hiking", "Long-distance Running", "Winter Swimming", "Travelling"];
 
-const PassionList = ["Clean Code", "Mentoring", "Ancient Civilizations"];
+const PassionKeywords = ['Coding', 'Mentoring', 'Learning'];
 
 const tabs = [
     {
@@ -79,10 +69,18 @@ const tabs = [
     },
     {
         label: 'Hobbies',
-        content: <Flower />
+        content: <KeywordList keywords={HobbyList} />
     },
     {
         label: 'Passions',
-        content: <KeywordList keywords={PassionList} />
+        content: <KeywordBubbles keywords={PassionKeywords} />
     }
 ];
+
+export default function SkillsBar() {
+    return (
+        <div className="skills-section">
+            <SkillsTabs tabs={tabs} defaultTab={2} />
+        </div>
+    )
+}
