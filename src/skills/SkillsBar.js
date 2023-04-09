@@ -83,7 +83,12 @@ export default function SkillsBar() {
         <div className="skills-section">
             <div className="summary-card">
                 <h2 style={{ textAlign: 'center' }}>About Me</h2>
-                <p>Software engineer with US-Swiss dual citizenship and experience working in many different cultures. Has a Master's Degree in Computer Science and published research in the machine learning space. Experienced in building scalable, resilient software for the Cloud. Slightly fanatic about code readability, test coverage and proper documentation. Passionate about teaching and mentorship. Currently moonlighting in app development.</p>
+                <p>Hi, my name is Sabrina and I'm a full-stack software engineer, welcome to my little Reactjs project!
+                    Here's a little about me: I grew up in Europe with US-Swiss dual citizenship and have lived,
+                    studied and worked in several countries since. I love creating practical software applications for every-day use,
+                    reading classical literature and travelling to visit ancient ruins.
+                    I'm passionate about rectifying the gender imbalance in the engineering world.
+                    Currently, I'm moonlighting in smartphone app development.</p>
             </div>
             <HorizontalTabs tabs={tabs} defaultTab={3} />
         </div>

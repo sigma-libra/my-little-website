@@ -23,11 +23,11 @@ export default function BasicTimeLine() {
         >
             <MakeTimeLineEntry time={"now"} description={"Tech Lead at IMTF"} />
             <MakeTimeLineEntry time={"August 2021"} description={"Joined IMTF as a Software Engineer"} />
-            <MakeTimeLineEntry time={"2020 - 2021"} description={"Software Engineer at ti&m Consulting"} />
+            <MakeTimeLineEntry time={"2020 - 2021"} description={"Software Engineer at ti&m Consulting in Zürich"} />
             <MakeTimeLineEntry time={"Spring 2020"} description={"Research Intern at SAP Labs France"} />
-            <MakeTimeLineEntry time={"2018 - 2020"} description={"Master's Degree in Computer Science at EPFL"} />
-            <MakeTimeLineEntry time={"2018"} description={"Erasmus Year at Vienna University of Technology"} />
-            <MakeTimeLineEntry time={"2015 - 2017"} description={"Bachelor in Computer Science at EPFL"} />
+            <MakeTimeLineEntry time={"2018 - 2020"} description={"Back to EPFL for a Master's Degree in Computer Science"} />
+            <MakeTimeLineEntry time={"2018"} description={"Erasmus Year at Vienna University of Technology (TUW)"} />
+            <MakeTimeLineEntry time={"2015 - 2017"} description={"Bachelor in Computer Science at the Swiss Institute for Technology Lausanne (EPFL)"} />
             <MakeTimeLineEntry time={"2012 - 2015"} description={"Bilingual Swiss Maturity Degree"} isLast={true} />
         </Timeline>
     );

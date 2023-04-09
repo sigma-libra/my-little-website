@@ -23,9 +23,9 @@ function App() {
     <div className="App">
       <div className="container">
         <ProfileBar />
-        <ImageComponent width={'10%'} position={'center'} />
+        <ImageComponent width={'8%'} position={'center'} />
         <CurriculumBar />
-        <ImageComponent width={'5%'} position={'left'} />
+        <ImageComponent width={'2%'} position={'left'} />
         <SkillsBar />
       </div>
     </div>
