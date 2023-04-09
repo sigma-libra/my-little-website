@@ -1,35 +1,33 @@
 .unfolding-tabs .tab-title .inactive {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
     cursor: pointer;
     color: white;
-    width: 90%;
+    width: 95%;
     background-color: rgb(75, 87, 83);
 }
 
 .unfolding-tabs .tab-title .active {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
     cursor: pointer;
     color: white;
-    width: 90%;
+    width: 95%;
     background-color: rgb(224, 57, 57);
 }
 
 .unfolding-tabs .tab-content {
-    justify-content: left;
     background-color: rgb(204, 240, 204);
-    width: 90%;
+    width: 95%;
     padding: 10px;
-    margin-bottom: 10px;
-
+    margin: 10px;
 }
 
-.unfolding-tabs .tab-content .tech-stack-list {
-    list-style-type: square;
-
+.unfolding-tabs .tab-content p {
+    display: flex;
+    justify-content: center;
 }

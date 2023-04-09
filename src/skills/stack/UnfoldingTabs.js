@@ -18,9 +18,7 @@ export default function UnfoldingTabs({ content }) {
             <div>
                 {activeTabs.includes(index) && (
                     <div className="tab-content">
-                        <ul className="tech-stack-list">
-                            {selectedTab.content.map((entry) => <li>{entry}</li>)}
-                        </ul>
+                        {selectedTab.content.map((entry) => <p>{entry}</p>)}
                     </div>
 
                 )}

@@ -1,4 +1,5 @@
 import './ProfileBar.css';
+import '../App.css';
 
 function MakeLink({ url, name }) {
     return <a href={url} target="_blank" rel="noreferrer">{name}</a>
@@ -10,7 +11,6 @@ const IdCard = () => {
             <h1>Sabrina Kall</h1>
             <img src={`${process.env.PUBLIC_URL}/assets/images/profile_photo.jpg`} height={200} alt="profile_photo" />
             <h2>Software Engineer</h2>
-            <p>Born 10th October 1996</p>
             <nav className="links-container">
                 <MakeLink url="https://www.linkedin.com/in/sabrina-kall/" name="linkedin" />
                 <MakeLink url="https://github.com/sigma-libra" name="github" />

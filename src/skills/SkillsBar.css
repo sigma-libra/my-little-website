@@ -9,3 +9,25 @@
     background-color: rgb(103, 156, 103);
     overflow: scroll;
 }
+
+.summary-card {
+    background-color: rgb(75, 87, 83);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    color: white;
+}
+
+.lake-card {
+    background-color: rgb(114, 150, 176);
+    margin: 40px;
+    padding: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    color: white;
+}

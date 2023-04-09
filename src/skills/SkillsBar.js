@@ -1,10 +1,11 @@
 import './SkillsBar.css';
-import KeywordList from "./hobbies/Keywords";
+import '../App.css';
 import HorizontalTabs from "./HorizontalTabs";
 import UnfoldingTabs from "./stack/UnfoldingTabs";
 import IconList from "./expertise/IconList";
 import { FaBrain, FaCertificate, FaClipboard, FaCloud, FaCode, FaCogs, FaDatabase, FaNetworkWired, FaPeopleCarry, FaPhone, FaServer } from 'react-icons/fa';
-import KeywordBubbles from "./passions/KeywordBubbles";
+import KeywordBubbles from "./hobbies/KeywordBubbles";
+import KeywordTree from "./passions/KeywordTree";
 
 
 const SkillsList = [
@@ -56,12 +57,12 @@ const TechStackMap = [
 
 const HobbyList = ["Coding", "Reading", "Writing", "Salsa", "Gardening", "Baking", "Hiking", "Running", "Winter-Swimming", "Travel"];
 
-const PassionKeywords = ['Coding', 'Mentoring', 'Learning'];
+const PassionKeywords = ["Coding", "Mentoring", "Learning"];
 
 const tabs = [
     {
         label: 'Skills',
-        content: <IconList listItems={SkillsList} />
+        content: <div className="summary-card"><IconList listItems={SkillsList} /></div>
     },
     {
         label: 'Tech Stack',
@@ -69,17 +70,21 @@ const tabs = [
     },
     {
         label: 'Hobbies',
-        content: <KeywordBubbles keywords={HobbyList} />
+        content: <div className="lake-card"><KeywordBubbles keywords={HobbyList} /></div>
     },
     {
         label: 'Passions',
-        content: <KeywordBubbles keywords={PassionKeywords} />
+        content: <KeywordTree words={PassionKeywords} />
     }
 ];
 
 export default function SkillsBar() {
     return (
         <div className="skills-section">
+            <div className="summary-card">
+                <h2 style={{ textAlign: 'center' }}>About Me</h2>
+                <p>Software engineer with US-Swiss dual citizenship and experience working in many different cultures. Has a Master's Degree in Computer Science and published research in the machine learning space. Experienced in building scalable, resilient software for the Cloud. Slightly fanatic about code readability, test coverage and proper documentation. Passionate about teaching and mentorship. Currently moonlighting in app development.</p>
+            </div>
             <HorizontalTabs tabs={tabs} defaultTab={3} />
         </div>
     )
