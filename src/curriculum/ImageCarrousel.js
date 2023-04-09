@@ -19,8 +19,8 @@ const photos = [
     },
     {
         id: 'p4',
-        title: 'Skiing',
-        url: './images/skiing.jpg',
+        title: 'Mountains',
+        url: './images/mountains.jpg',
     },
     {
         id: 'p5',
