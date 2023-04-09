@@ -15,7 +15,7 @@ const IdCard = () => {
                 <MakeLink url="https://www.linkedin.com/in/sabrina-kall/" name="linkedin" />
                 <MakeLink url="https://github.com/sigma-libra" name="github" />
                 <MakeLink url="https://stackoverflow.com/users/8788182/sigma1510" name="stackoverflow" />
-                <MakeLink url="/assets/files/sabrina_kall_cv.pdf" name="CV" />
+                <MakeLink url="https://sigma-libra.github.io/my-little-website/assets/files/sabrina_kall_cv.pdf" name="CV" />
             </nav>
         </div>
     )
