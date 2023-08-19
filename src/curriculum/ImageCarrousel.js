@@ -29,8 +29,13 @@ const photos = [
     },
     {
         id: 'p6',
-        title: 'Antibe',
+        title: 'Antibes',
         url: './images/antibes.jpg',
+    },
+    {
+        id: 'p7',
+        title: 'Chicago',
+        url: './images/chicago.jpg',
     },
 ];
 
