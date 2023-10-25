@@ -27,7 +27,7 @@ export default function BasicTimeLine() {
                     Senior Fullstack Engineer at<a href='https://www.sewerai.com/' target="_blank">SewerAI</a>for AI Sewer Inspection Software, working remote in Chicago
                 </span>
             } />
-            < MakeTimeLineEntry time={"2012 - 2023"} description={<span>
+            < MakeTimeLineEntry time={"2021 - 2023"} description={<span>
                 Software Engineer, then Tech Lead at<a href="https://imtf.com/" target="_blank">IMTF</a>building AI software for name matching
             </span>} />
             <MakeTimeLineEntry time={"2020 - 2021"} description={<span>
