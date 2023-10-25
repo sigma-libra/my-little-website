@@ -90,7 +90,7 @@ export default function SkillsBar() {
                     I'm passionate about rectifying the gender imbalance in the engineering world.
                     Currently, I'm moonlighting in smartphone app development.</p>
             </div>
-            <HorizontalTabs tabs={tabs} defaultTab={3} />
+            <HorizontalTabs tabs={tabs} defaultTab={0} />
         </div>
     )
 }
