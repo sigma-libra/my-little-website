@@ -10,6 +10,10 @@ npm start
 
 ## Deploy to github pages
 
+Merge changes to main, then:
+
 ```
 npm run deploy
 ```
+
+See deployments here: https://github.com/sigma-libra/my-little-website/deployments
