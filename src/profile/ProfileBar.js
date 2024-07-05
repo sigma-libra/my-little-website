@@ -49,7 +49,7 @@ const PublicationsCard = () => {
 
 export default function ProfileBar({params}) {
     return (
-        <div className={`profile-section text-white h-screen bg-gray-900 ${params}`}>
+        <div className={`profile-section text-white bg-gray-900 ${params}`}>
             <IdCard />
             <LanguageCard />
             <PublicationsCard />
