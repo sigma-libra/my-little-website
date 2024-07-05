@@ -48,27 +48,20 @@ function ImageCarousel() {
     const prev = () => {
         setCurrentIndex((currentIndex - 1 + photos.length) % photos.length);
     };
+    console.log(currentIndex);
 
     return (
         <div className="relative w-full mx-auto mb-20">
-            {/* Render the carousel */}
             <div className="slider-container relative overflow-hidden">
                 {photos.map((photo, index) => (
-                    <div
-                        key={photo.id}
-                        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
-                            currentIndex === index ? 'opacity-100' : 'opacity-0'
-                        }`}
-                    >
                         <img
+                            key={index}
                             src={`${process.env.PUBLIC_URL}/assets/${photo.url}`}
                             alt={photo.title}
-                            className="w-full h-full object-contain"
+                            className={`object-contain mx-auto ${currentIndex === index ? "opacity-100 h-[300px]" : "opacity-0 h-0"}`}
                         />
-                    </div>
                 ))}
 
-                {/* Previous button */}
                 <button
                     onClick={prev}
                     className="prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white font-bold text-lg px-4 py-2 rounded"
@@ -76,7 +69,6 @@ function ImageCarousel() {
                     &lt;
                 </button>
 
-                {/* Next button */}
                 <button
                     onClick={next}
                     className="next absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white font-bold text-lg px-4 py-2 rounded"
@@ -85,7 +77,6 @@ function ImageCarousel() {
                 </button>
             </div>
 
-            {/* Render dots indicator */}
             <div className="flex justify-center mt-4">
                 {photos.map((photo, index) => (
                     <span
