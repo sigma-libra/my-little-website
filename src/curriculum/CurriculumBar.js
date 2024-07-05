@@ -1,17 +1,12 @@
-import './CurriculumBar.css';
 import BasicTimeline from "./BasicTimeLine";
 import ImageCarousel from "./ImageCarrousel";
 
-function CurriculumBar() {
+export default function CurriculumBar({params}) {
     return (
-        <div className="curriculum-outer-section" >
-            <h2 style={{ textAlign: 'center' }}>Curriculum</h2>
-            <div className="curriculum-inner-section">
-                <BasicTimeline />
-            </div>
+        <div className={`curriculum-outer-section text-left bg-green-200 ${params}`}>
+            <h2 className="text-center text-2xl font-bold my-2">Curriculum</h2>
+            <BasicTimeline />
             <ImageCarousel />
         </div>
     )
 }
-
-export default CurriculumBar;

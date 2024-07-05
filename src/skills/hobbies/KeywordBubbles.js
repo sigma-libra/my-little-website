@@ -23,16 +23,14 @@ function Bubble({ keyword, index, total }) {
 
 
 
-function Bubbles({ keywords }) {
+export default function Bubbles({ keywords }) {
   return (
-    <div className="bubbles-container">
-      {keywords.map((keyword, index) => (
-        <Bubble keyword={keyword} index={index} total={keywords.length} key={index} />
-      ))}
+    <div className="bg-lakeGrey mx-4 my-4 p-4 border-2 border-darkGrey">
+      <div className="bubbles-container">
+        {keywords.map((keyword, index) => (
+          <Bubble keyword={keyword} index={index} total={keywords.length} key={index} />
+        ))}
+      </div>
     </div>
   );
 }
-
-
-
-export default Bubbles;

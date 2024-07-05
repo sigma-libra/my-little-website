@@ -1,35 +1,31 @@
-import './ProfileBar.css';
-import '../App.css';
+import React from 'react';
+import { MakeLink } from "../helpers";
 
-function MakeLink({ url, name }) {
-    return <a href={url} target="_blank" rel="noreferrer">{name}</a>
-}
 
 const IdCard = () => {
     return (
-        <div>
-            <h1>Sabrina Kall</h1>
-            <img src={`${process.env.PUBLIC_URL}/assets/images/profile_photo.jpg`} height={200} alt="profile_photo" />
-            <h2>Software Engineer</h2>
-            <nav className="links-container">
+        <div className="text-center">
+            <h1 className="text-white text-4xl font-bold my-3">Sabrina Kall</h1>
+            <img src={`${process.env.PUBLIC_URL}/assets/images/profile_photo.jpg`} alt="profile_photo" className="h-[200px] mx-auto" />
+            <h2 className="text-white text-4xl font-bold my-3">Fullstack Software Engineer</h2>
+            <nav className="flex justify-center gap-4 mt-4">
                 <MakeLink url="https://www.linkedin.com/in/sabrina-kall/" name="LinkedIn" />
                 <MakeLink url="https://github.com/sigma-libra" name="Github" />
                 <MakeLink url="https://stackoverflow.com/users/8788182/sigma1510" name="StackOverflow" />
                 <MakeLink url="https://sigma-libra.github.io/my-little-website/assets/files/sabrina_kall_cv.pdf" name="CV" />
-                </nav>
-                <nav className="links-container">
+            </nav>
+            <nav className="flex justify-center gap-4 mt-2">
                 <MakeLink url="https://play.google.com/store/apps/developer?id=sigma-libra" name="My apps" />
                 <MakeLink url="https://whatistechword.com" name="My Tech Blog" />
-                </nav>
-
+            </nav>
         </div>
     )
 }
 
 const LanguageCard = () => {
     return (
-        <div className="profile-card">
-            <h2>Languages</h2>
+        <div className="profile-card bg-cactusGreen mx-4 my-4 p-4 border-2 border-white text-white text-center">
+            <h2 className="text-2xl my-2">Languages</h2>
             <p>English</p>
             <p>French</p>
             <p>(Swiss) German</p>
@@ -40,25 +36,22 @@ const LanguageCard = () => {
 
 const PublicationsCard = () => {
     return (
-        <div className="profile-card">
-            <h2>Publications</h2>
-            <a href="https://www.scitepress.org/PublicationsDetail.aspx?ID=52RWrB6AVd8=&t=1" target="_blank" rel="noreferrer">Credential Digger</a>
+        <div className="profile-card bg-cactusGreen mx-4 my-4 p-4 border-2 border-white text-white  text-center">
+            <h2 className="text-2xl my-2">Publications</h2>
+            <MakeLink url="https://www.scitepress.org/PublicationsDetail.aspx?ID=52RWrB6AVd8=&t=1" name="Credential Digger"/>
             <p>Using Federated Learning to teach an AI to recognize passwords.</p>
-            <a href="https://www.epfl.ch/labs/dedis/wp-content/uploads/2020/01/report-2019-1-Sabrina-Kall.pdf" target="_blank" rel="noreferrer">Know-Thy-Neighbor</a>
+            <MakeLink url="https://www.epfl.ch/labs/dedis/wp-content/uploads/2020/01/report-2019-1-Sabrina-Kall.pdf" name="Know-Thy-Neighbor"/>
             <p>Using message latency to identify malicious nodes in a blockchain.</p>
-
         </div>
     )
 }
 
-function ProfileBar() {
+export default function ProfileBar({params}) {
     return (
-        <div className="profile-section">
+        <div className={`profile-section text-white h-screen bg-gray-900 ${params}`}>
             <IdCard />
             <LanguageCard />
             <PublicationsCard />
-        </div>)
+        </div>
+    )
 }
-
-
-export default ProfileBar;
