@@ -8,6 +8,7 @@ const IdCard = () => {
             <h1 className="text-white text-4xl font-bold my-3">Sabrina Kall</h1>
             <img src={`${process.env.PUBLIC_URL}/assets/images/profile_photo.jpg`} alt="profile_photo" className="h-[200px] mx-auto" />
             <h2 className="text-white text-4xl font-bold my-3">Fullstack Software Engineer</h2>
+            <h3 className="text-mossGreen text-2xl font-bold my-3">Currently in: Seattle, USA</h3>
             <nav className="flex justify-center gap-4 mt-4">
                 <MakeLink url="https://www.linkedin.com/in/sabrina-kall/" name="LinkedIn" />
                 <MakeLink url="https://github.com/sigma-libra" name="Github" />
