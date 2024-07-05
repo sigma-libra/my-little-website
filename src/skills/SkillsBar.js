@@ -73,11 +73,11 @@ const tabs = [
     }
 ];
 
-export default function SkillsBar() {
+export default function SkillsBar({params}) {
     return (
-        <div className="skills-section text-white w-1/3 h-screen overflow-y-auto bg-green-500">
-            <div className="summary-card bg-gray-700 mx-4 my-4 p-4 border-2 border-green-300">
-                <h2 className="text-center">About Me</h2>
+        <div className={`text-white h-full bg-mossGreen ${params}`}>
+            <div className="bg-darkGrey mx-4 my-4 p-4 border-2 border-cactusGreen">
+                <h2 className="text-center text-2xl font-bold">About Me</h2>
                 <p>
                     Hi, my name is Sabrina and I'm a full-stack software engineer, welcome to my little Reactjs project!
                     Here's a little about me: I grew up in Europe with US-Swiss dual citizenship and have lived,

@@ -16,7 +16,7 @@ export default function UnfoldingTabs({ content }) {
         return (
             <div>
                 {activeTabs.includes(index) && (
-                    <div className="bg-green-200 w-[95%] p-2.5 m-2.5">
+                    <div className="bg-green-200 text-black w-[95%] p-2.5 m-2.5">
                         {selectedTab.content.map((entry, i) => <p key={i} className="flex justify-center">{entry}</p>)}
                     </div>
                 )}

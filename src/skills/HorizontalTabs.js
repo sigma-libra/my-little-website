@@ -15,7 +15,7 @@ export default function HorizontalTabs(props) {
                     <button
                         key={index}
                         onClick={() => handleTabClick(index)}
-                        className={`min-w-1/4 border-black ${index === activeTab ? 'bg-green-200' : 'bg-red-600'}`}
+                        className={`flex w-1/4 text-xl font-bold justify-center items-center border-black border-2 p-2 ${index === activeTab ? 'bg-green-200 text-black' : 'bg-red-600'}`}
                         label={tab.label}
                     ><h2>{tab.label}</h2></button>
                 ))}

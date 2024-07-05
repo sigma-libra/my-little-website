@@ -52,13 +52,13 @@ function ImageCarousel() {
 
     return (
         <div className="relative w-full mx-auto mb-20">
-            <div className="slider-container relative overflow-hidden">
+            <div className="slider-container relative">
                 {photos.map((photo, index) => (
                         <img
                             key={index}
                             src={`${process.env.PUBLIC_URL}/assets/${photo.url}`}
                             alt={photo.title}
-                            className={`object-contain mx-auto ${currentIndex === index ? "opacity-100 h-[300px]" : "opacity-0 h-0"}`}
+                            className={`object-contain mx-auto ${currentIndex === index ? "opacity-100 max-h-[300px]" : "opacity-0 h-0"}`}
                         />
                 ))}
 

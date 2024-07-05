@@ -46,9 +46,9 @@ const PublicationsCard = () => {
     )
 }
 
-export default function ProfileBar() {
+export default function ProfileBar({params}) {
     return (
-        <div className="profile-section text-white w-1/4 h-screen overflow-y-auto bg-gray-900">
+        <div className={`profile-section text-white h-screen bg-gray-900 ${params}`}>
             <IdCard />
             <LanguageCard />
             <PublicationsCard />

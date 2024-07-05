@@ -6,7 +6,7 @@ function KeywordTree({ words }) {
         const top = `${(index + 1) * 20}%`;
         const left = isEven ? "auto" : "0";
         const right = isEven ? "0" : "auto";
-        const transform = isEven ? "rotate(10deg)" : "rotate(-10deg)";
+        const transform = isEven ? "rotate(20deg)" : "rotate(-20deg)";
 
         return (
             <div

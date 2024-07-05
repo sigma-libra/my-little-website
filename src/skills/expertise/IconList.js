@@ -7,15 +7,17 @@ export default function IconList({ listItems }) {
     };
 
     return (
-        <div className="flex flex-col mb-2.5">
-            <ul className="list-none pl-2.5 pb-2.5">
-                {listItems.map(([icon, item]) => (
-                    <li className="flex pl-0 pb-2.5 text-2xl text-green-200" key={item}>
-                        {icon && React.cloneElement(icon, { style: iconStyle })}
-                        {item}
-                    </li>
-                ))}
-            </ul>
+        <div className="bg-darkGrey mx-4 my-4 p-4 border-2 border-cactusGreen">
+            <div className="flex flex-col mb-2.5">
+                <ul className="list-none pl-2.5 pb-2.5">
+                    {listItems.map(([icon, item]) => (
+                        <li className="flex pl-0 pb-2.5 text-2xl text-green-200" key={item}>
+                            {icon && React.cloneElement(icon, { style: iconStyle })}
+                            {item}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 }
