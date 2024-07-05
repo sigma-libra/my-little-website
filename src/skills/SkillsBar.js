@@ -1,12 +1,9 @@
-import './SkillsBar.css';
-import '../App.css';
 import HorizontalTabs from "./HorizontalTabs";
 import UnfoldingTabs from "./stack/UnfoldingTabs";
 import IconList from "./expertise/IconList";
 import { FaBrain, FaCertificate, FaClipboard, FaCloud, FaCode, FaCogs, FaDatabase, FaNetworkWired, FaPeopleCarry, FaPhone, FaServer } from 'react-icons/fa';
 import KeywordBubbles from "./hobbies/KeywordBubbles";
 import KeywordTree from "./passions/KeywordTree";
-
 
 const SkillsList = [
     [<FaCode key="1" />, "Fullstack Development"],
@@ -21,7 +18,6 @@ const SkillsList = [
     [<FaBrain key="5" />, "Machine Learning"],
     [<FaPhone key="6" />, "App Development"],
 ];
-
 
 const TechStackMap = [
     {
@@ -54,7 +50,6 @@ const TechStackMap = [
     }
 ];
 
-
 const HobbyList = ["Coding", "Reading", "Writing", "Gardening", "Cooking", "Hiking", "Running", "Travel", "Dancing"];
 
 const PassionKeywords = ["Coding", "Mentoring", "Learning", "Dancing"];
@@ -80,15 +75,17 @@ const tabs = [
 
 export default function SkillsBar() {
     return (
-        <div className="skills-section">
-            <div className="summary-card">
-                <h2 style={{ textAlign: 'center' }}>About Me</h2>
-                <p>Hi, my name is Sabrina and I'm a full-stack software engineer, welcome to my little Reactjs project!
+        <div className="skills-section text-white w-1/3 h-screen overflow-y-auto bg-green-500">
+            <div className="summary-card bg-gray-700 mx-4 my-4 p-4 border-2 border-green-300">
+                <h2 className="text-center">About Me</h2>
+                <p>
+                    Hi, my name is Sabrina and I'm a full-stack software engineer, welcome to my little Reactjs project!
                     Here's a little about me: I grew up in Europe with US-Swiss dual citizenship and have lived,
                     studied and worked in several countries since. I love creating practical software applications for every-day use,
                     reading classical literature and travelling to visit ancient ruins.
                     I'm passionate about rectifying the gender imbalance in the engineering world.
-                    Currently, I'm moonlighting in smartphone app development.</p>
+                    Currently, I'm moonlighting in smartphone app development.
+                </p>
             </div>
             <HorizontalTabs tabs={tabs} defaultTab={0} />
         </div>

@@ -1,4 +1,3 @@
-import './UnfoldingTabs.css';
 import React, { useState } from 'react';
 
 export default function UnfoldingTabs({ content }) {
@@ -17,27 +16,24 @@ export default function UnfoldingTabs({ content }) {
         return (
             <div>
                 {activeTabs.includes(index) && (
-                    <div className="tab-content">
-                        {selectedTab.content.map((entry) => <p>{entry}</p>)}
+                    <div className="bg-green-200 w-[95%] p-2.5 m-2.5">
+                        {selectedTab.content.map((entry, i) => <p key={i} className="flex justify-center">{entry}</p>)}
                     </div>
-
                 )}
             </div>
         )
     }
 
     return (
-        <div className="unfolding-tabs">
+        <div>
             {content.map((tab, index) => (
                 <div key={index}>
-                    <div className="tab-title" onClick={() => toggleTab(index)}>
-                        <div className={`${activeTabs.includes(index) ? 'active' : 'inactive'}`}>{tab.title}</div>
+                    <div onClick={() => toggleTab(index)}>
+                        <div className={`flex justify-center p-2.5 m-2.5 cursor-pointer text-white w-[95%] ${activeTabs.includes(index) ? 'bg-red-600' : 'bg-gray-700'}`}>{tab.title}</div>
                     </div>
                     <DisplayContent index={index} selectedTab={tab} />
                 </div>
-            ))
-            }
-
+            ))}
         </div>
     )
 }
