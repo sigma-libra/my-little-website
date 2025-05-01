@@ -18,6 +18,7 @@ const IdCard = () => {
             <nav className="flex justify-center gap-4 mt-2">
                 <MakeLink url="https://play.google.com/store/apps/developer?id=sigma-libra" name="My apps" />
                 <MakeLink url="https://whatistechword.com" name="My Tech Blog" />
+                <MakeLink url="https://huggingface.co/sigma-libra" name="My HuggingFace"/>
             </nav>
         </div>
     )
