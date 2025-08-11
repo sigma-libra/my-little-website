@@ -22,7 +22,7 @@ const SkillsList = [
 const TechStackMap = [
     {
         title: 'Infrastructure',
-        content: ["Kubernetes", "Helm", "Docker", "AWS", "Kafka"],
+        content: ["Kubernetes", "Helm", "Docker", "AWS", "Kafka", "Temporal", "Terraform"],
     },
     {
         title: 'Backend Development',
@@ -37,17 +37,17 @@ const TechStackMap = [
         content: ["Python", "Pandas", "Jupyter Notebook", "Pytorch", "Spark", "Hadoop"],
     },
     {
-        title: "Mobile Development",
-        content: ["Flutter"]
-    },
-    {
         title: "Databases",
-        content: ["SQL", "Postgres", "MongoDB", "DynamoDB", "Elasticsearch", "Kafka"]
+        content: ["SQL", "Postgres", "MongoDB", "DynamoDB", "Elasticsearch", "Kafka", "Clickhouse"]
     },
     {
         title: "Project Management",
         content: ["Git", "CI/CD Pipelines", "JIRA", "Confluence"]
-    }
+    },
+    {
+        title: "Mobile Development",
+        content: ["Flutter"]
+    },
 ];
 
 const HobbyList = ["Coding", "Reading", "Writing", "Gardening", "Cooking", "Hiking", "Running", "Travel", "Dancing"];
@@ -78,13 +78,13 @@ export default function SkillsBar({params}) {
         <div className={`text-white h-full bg-mossGreen ${params}`}>
             <div className="bg-darkGrey mx-4 my-4 p-4 border-2 border-cactusGreen">
                 <h2 className="text-center text-2xl font-bold">About Me</h2>
-                <p>
-                    Hi, my name is Sabrina and I'm a full-stack software engineer, welcome to my little Reactjs project!
+                <p className="text-lg">
+                    Hi, my name is Sabrina and I'm a full-stack software engineer and site reliability engineer. 
+                    Welcome to my toy website where I like to play with React!
                     Here's a little about me: I grew up in Europe with US-Swiss dual citizenship and have lived,
                     studied and worked in several countries since. I love creating practical software applications for every-day use,
-                    reading classical literature and travelling to visit ancient ruins.
-                    I'm passionate about rectifying the gender imbalance in the engineering world.
-                    Currently, I'm moonlighting in smartphone app development.
+                    reading classical literature and travelling to visit ancient ruins. 
+                    I'm currently a digital nomad in the US, let me know a place I should explore!
                 </p>
             </div>
             <HorizontalTabs tabs={tabs} defaultTab={0} />
