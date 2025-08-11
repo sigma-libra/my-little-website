@@ -52,7 +52,7 @@ const TechStackMap = [
 
 const HobbyList = ["Coding", "Reading", "Writing", "Gardening", "Cooking", "Hiking", "Running", "Travel", "Dancing"];
 
-const PassionKeywords = ["Coding", "Mentoring", "Learning", "Dancing"];
+const PassionKeywords = ["Writing", "Coding", "Travelling", "Learning", "Dancing", "Mentoring"];
 
 const tabs = [
     {

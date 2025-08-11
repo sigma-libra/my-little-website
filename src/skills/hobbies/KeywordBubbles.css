@@ -1,52 +1,162 @@
 .bubbles-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50vh;
-    margin: 10px;
-    animation: orbit 100s linear infinite;
-    transform-origin: center center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  margin: 10px;
+  animation: orbit 100s linear infinite;
+  transform-origin: center center;
+  perspective: 800px; /* adds subtle 3D depth */
 }
 
-
 .bubble {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background-color: rgb(138, 173, 138);
-    color: white;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border: 5px solid rgb(204, 240, 204);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 60% 60%, #a8e6a3, #5da85a);
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.bubble:hover {
+  transform: translate(-50%, -50%) scale(1.15) rotateY(10deg);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
+  z-index: 2;
 }
 
 .bubble span {
-    display: inline-block;
-    animation: rotate-text 100s linear infinite;
-
+  display: inline-block;
+  animation: rotate-text 100s linear infinite;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
 @keyframes orbit {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes rotate-text {
-    from {
-        transform: rotate(0);
-    }
-
-    to {
-        transform: rotate(-360deg);
-    }
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
+
+.bg-lakeGrey {
+  position: relative;
+  background: #a2d2ff; /* soft blue water base color */
+  overflow: hidden;
+}
+
+.bg-lakeGrey::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 40%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 3s ease-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 0;
+  }
+}
+
+
+.wave {
+  position: absolute;
+  width: 160px;
+  height: 30px;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.6));
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Different vertical positions and animation timing */
+.wave1 {
+  top: 20%;
+  left: 20%;
+  animation-name: waveMove1;
+  animation-duration: 6s;
+}
+
+.wave2 {
+  top: 45%;
+  left: 70%;
+  opacity: 0.4;
+  animation-name: waveMove2;
+  animation-duration: 8s;
+}
+
+.wave3 {
+  top: 70%;
+  left: 10%;
+  width: 180px;
+  height: 35px;
+  opacity: 0.45;
+  animation-name: waveMove3;
+  animation-duration: 5s;
+}
+
+/* Smooth horizontal oscillation */
+@keyframes waveMove1 {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes waveMove2 {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25px);
+  }
+}
+
+@keyframes waveMove3 {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+
+
