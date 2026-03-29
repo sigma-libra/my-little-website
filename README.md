@@ -13,7 +13,7 @@ npm start
 Merge changes to main, then:
 
 ```
-T
+npm run deploy
 ```
 
 See deployments here: https://github.com/sigma-libra/my-little-website/deployments
