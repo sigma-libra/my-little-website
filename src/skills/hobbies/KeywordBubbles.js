@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./KeywordBubbles.css";
+
+// Width the layout was designed for (px): outermost pad at x=±200 + 50px pad radius = 250 each side
+const REFERENCE_WIDTH = 500;
 
 // All 11 positions (px from centre) — 9 hobby pads + 2 flowers, verified non-overlapping
 const PAD_POSITIONS = [
@@ -16,14 +19,14 @@ const PAD_POSITIONS = [
   { x:  -55, y:   58 },  // 10 ← flower
 ];
 
-function LilyPad({ keyword, index }) {
+function LilyPad({ keyword, index, scale }) {
   const pos = PAD_POSITIONS[index] ?? { x: 0, y: 0 };
   return (
     <div
       className="lily-pad"
       style={{
-        left: `calc(50% + ${pos.x}px)`,
-        top:  `calc(50% + ${pos.y}px)`,
+        left: `calc(50% + ${pos.x * scale}px)`,
+        top:  `calc(50% + ${pos.y * scale}px)`,
         animationDelay: `${(index * 0.65) % 4}s`,
       }}
     >
@@ -32,14 +35,14 @@ function LilyPad({ keyword, index }) {
   );
 }
 
-function WaterLilyPad({ posIndex }) {
+function WaterLilyPad({ posIndex, scale }) {
   const pos = PAD_POSITIONS[posIndex];
   const petals = 8;
   return (
     <div style={{
       position: "absolute",
-      left: `calc(50% + ${pos.x}px)`,
-      top:  `calc(50% + ${pos.y}px)`,
+      left: `calc(50% + ${pos.x * scale}px)`,
+      top:  `calc(50% + ${pos.y * scale}px)`,
       transform: "translate(-50%, -50%)",
       width: 64,
       height: 64,
@@ -112,17 +115,30 @@ function Wave({ className }) {
 }
 
 export default function Bubbles({ keywords }) {
+  const containerRef = useRef(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver(([entry]) => {
+      setScale(Math.min(1, entry.contentRect.width / REFERENCE_WIDTH));
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="pond mx-4 my-4 border-2 border-white/40 rounded-lg shadow-lg" style={{ position: "relative" }}>
       <Wave className="wave wave1" />
       <Wave className="wave wave2" />
       <Wave className="wave wave3" />
-      <div className="bubbles-container">
+      <div className="bubbles-container" ref={containerRef}>
         {keywords.map((keyword, index) => (
-          <LilyPad keyword={keyword} index={index} key={index} />
+          <LilyPad keyword={keyword} index={index} scale={scale} key={index} />
         ))}
-        <WaterLilyPad posIndex={9} key="flower-0" />
-        <WaterLilyPad posIndex={10} key="flower-1" />
+        <WaterLilyPad posIndex={9} scale={scale} key="flower-0" />
+        <WaterLilyPad posIndex={10} scale={scale} key="flower-1" />
       </div>
     </div>
   );
