@@ -84,7 +84,7 @@ export default function SkillsBar({params}) {
         >
             <div className="bg-darkGrey mx-4 my-4 p-4 border-2 border-cactusGreen">
                 <h2 className="font-display italic text-center text-2xl font-normal text-cactusGreen mb-3">About Me</h2>
-                <p className="font-sans text-base leading-relaxed">
+                <p className="font-sans text-base leading-relaxed text-justify">
                     I'm a full-stack software engineer and site reliability engineer. I grew up in Europe
                     with US-Swiss dual citizenship and have lived, studied, and worked in several countries.
                     I love building practical software, reading classical literature, and traveling to visit

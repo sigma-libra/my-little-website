@@ -43,7 +43,6 @@ const IdCard = () => {
             <motion.nav custom={5} variants={cardVariants} initial="hidden" animate="visible"
                 className="flex justify-center gap-4 mt-2">
                 <MakeLink url="https://play.google.com/store/apps/developer?id=sigma-libra" name="My Apps" />
-                <MakeLink url="https://whatistechword.com" name="My Tech Blog" />
                 <MakeLink url="https://huggingface.co/sigma-libra" name="HuggingFace" />
             </motion.nav>
         </div>

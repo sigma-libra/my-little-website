@@ -48,7 +48,7 @@ export default function BasicTimeLine() {
 
 function MakeTimeLineEntry({ time, description, isLast = false }) {
     return (<TimelineItem>
-        <TimelineOppositeContent color="textSecondary">
+        <TimelineOppositeContent color="textSecondary" sx={{ textAlign: 'right' }}>
             {time}
         </TimelineOppositeContent>
         <TimelineSeparator>
