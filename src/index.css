@@ -2,11 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Palette as CSS custom properties — mirrors tailwind.config.js tokens */
+:root {
+  --color-roseDark: #8B3252;
+  --color-cactusGreen: rgb(138, 173, 138);
+  --color-darkGrey: rgb(75, 87, 83);
+  --color-forestDark: #151e19;
+  --color-dustyRose: #f0dada;
+  --color-warmStone: #8a7e79;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica',
-    sans-serif;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-kerning: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,4 +23,48 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Profile column — cactus green thumb on dark */
+.profile-section {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--color-cactusGreen) 50%, transparent) transparent;
+}
+.profile-section::-webkit-scrollbar { width: 4px; }
+.profile-section::-webkit-scrollbar-track { background: transparent; }
+.profile-section::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--color-cactusGreen) 50%, transparent);
+  border-radius: 2px;
+}
+
+/* Center column — roseDark thumb on dusty rose */
+.curriculum-outer-section {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--color-roseDark) 40%, transparent) transparent;
+}
+.curriculum-outer-section::-webkit-scrollbar { width: 4px; }
+.curriculum-outer-section::-webkit-scrollbar-track { background: transparent; }
+.curriculum-outer-section::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--color-roseDark) 40%, transparent);
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Skills column — dark grey thumb on moss green */
+.skills-section {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--color-darkGrey) 50%, transparent) transparent;
+}
+.skills-section::-webkit-scrollbar { width: 4px; }
+.skills-section::-webkit-scrollbar-track { background: transparent; }
+.skills-section::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--color-darkGrey) 50%, transparent);
+  border-radius: 2px;
 }

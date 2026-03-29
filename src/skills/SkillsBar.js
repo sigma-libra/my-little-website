@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import HorizontalTabs from "./HorizontalTabs";
 import UnfoldingTabs from "./stack/UnfoldingTabs";
 import IconList from "./expertise/IconList";
@@ -13,7 +14,7 @@ const SkillsList = [
     [<FaClipboard key="10" />, "Testing"],
     [<FaCogs key="11" />, "DevOps"],
     [<FaNetworkWired key="4" />, "Product Integration"],
-    [<FaCertificate key="2" />, "Certified SCRUM Master"],
+    [<FaCertificate key="2" />, "Certified Scrum Master"],
     [<FaPeopleCarry key="3" />, "Cross-Team Collaboration"],
     [<FaBrain key="5" />, "Machine Learning"],
     [<FaPhone key="6" />, "App Development"],
@@ -75,19 +76,22 @@ const tabs = [
 
 export default function SkillsBar({params}) {
     return (
-        <div className={`text-white h-full bg-mossGreen ${params}`}>
+        <motion.div
+            className={`skills-section text-white h-full bg-mossGreen ${params}`}
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        >
             <div className="bg-darkGrey mx-4 my-4 p-4 border-2 border-cactusGreen">
-                <h2 className="text-center text-2xl font-bold">About Me</h2>
-                <p className="text-lg">
-                    Hi, my name is Sabrina and I'm a full-stack software engineer and site reliability engineer. 
-                    Welcome to my toy website where I like to play with React!
-                    Here's a little about me: I grew up in Europe with US-Swiss dual citizenship and have lived,
-                    studied and worked in several countries since. I love creating practical software applications for every-day use,
-                    reading classical literature and travelling to visit ancient ruins. 
-                    I'm currently a digital nomad in the US, let me know a place I should explore!
+                <h2 className="font-display italic text-center text-2xl font-normal text-cactusGreen mb-3">About Me</h2>
+                <p className="font-sans text-base leading-relaxed">
+                    I'm a full-stack software engineer and site reliability engineer. I grew up in Europe
+                    with US-Swiss dual citizenship and have lived, studied, and worked in several countries.
+                    I love building practical software, reading classical literature, and traveling to visit
+                    ancient ruins. Currently a digital nomad in the US — tell me a place I should explore!
                 </p>
             </div>
             <HorizontalTabs tabs={tabs} defaultTab={0} />
-        </div>
+        </motion.div>
     )
 }

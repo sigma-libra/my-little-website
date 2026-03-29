@@ -48,22 +48,23 @@ function ImageCarousel() {
     const prev = () => {
         setCurrentIndex((currentIndex - 1 + photos.length) % photos.length);
     };
-    console.log(currentIndex);
 
     return (
         <div className="relative w-full mx-auto mb-20">
             <div className="slider-container relative">
                 {photos.map((photo, index) => (
-                        <img
-                            key={index}
-                            src={`${process.env.PUBLIC_URL}/assets/${photo.url}`}
-                            alt={photo.title}
-                            className={`object-contain mx-auto ${currentIndex === index ? "opacity-100 max-h-[300px]" : "opacity-0 h-0"}`}
-                        />
+                    <img
+                        key={index}
+                        src={`${process.env.PUBLIC_URL}/assets/${photo.url}`}
+                        alt={photo.title}
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                        className={`object-contain mx-auto ${currentIndex === index ? "opacity-100 max-h-[300px]" : "opacity-0 h-0"}`}
+                    />
                 ))}
 
                 <button
                     onClick={prev}
+                    aria-label="Previous photo"
                     className="prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white font-bold text-lg px-4 py-2 rounded"
                 >
                     &lt;
@@ -71,6 +72,7 @@ function ImageCarousel() {
 
                 <button
                     onClick={next}
+                    aria-label="Next photo"
                     className="next absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white font-bold text-lg px-4 py-2 rounded"
                 >
                     &gt;
@@ -79,13 +81,19 @@ function ImageCarousel() {
 
             <div className="flex justify-center mt-4">
                 {photos.map((photo, index) => (
-                    <span
+                    <button
                         key={photo.id}
-                        className={`dot mx-1 rounded-full h-3 w-3 bg-gray-400 ${
-                            currentIndex === index ? 'bg-gray-800' : ''
-                        }`}
+                        aria-label={`Go to ${photo.title}`}
+                        aria-current={currentIndex === index ? 'true' : undefined}
                         onClick={() => setCurrentIndex(index)}
-                    ></span>
+                        className="p-3 inline-flex items-center justify-center"
+                    >
+                        <span
+                            className={`block rounded-full h-2.5 w-2.5 transition-colors duration-200 ${
+                                currentIndex === index ? 'bg-roseDark' : 'bg-warmStone/50'
+                            }`}
+                        />
+                    </button>
                 ))}
             </div>
         </div>

@@ -9,7 +9,7 @@ export default function App() {
 
   if (isMobile) {
     return (
-      <div className="flex flex-col w-screen h-full items-center justify-center" style={{ backgroundImage: `url(${imageUrl})` }}>
+      <div className="flex flex-col w-screen h-full items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${imageUrl})` }}>
         <ProfileBar params={"w-3/4 mb-10"}/>
         <SkillsBar params={"w-3/4 mb-10"} />
         <CurriculumBar params={"w-3/4 mb-10"} />
@@ -18,7 +18,7 @@ export default function App() {
   }
 
   return (
-    <div className="flex flex-row h-screen justify-between" style={{ backgroundImage: `url(${imageUrl})` }}>
+    <div className="flex flex-row h-screen justify-between bg-cover bg-center" style={{ backgroundImage: `url(${imageUrl})` }}>
         <ProfileBar params={"w-1/4 overflow-y-auto"}/>
         <CurriculumBar  params={"w-1/3 overflow-y-auto"}/>
         <SkillsBar params={"w-1/3 overflow-y-auto"} />

@@ -14,9 +14,9 @@ export default function IconList({ listItems }) {
           {listItems.map(([icon, item]) => (
             <li
               key={item}
-              className="flex items-center pl-0 pb-2.5 text-2xl text-green-200 cursor-default select-none
-                transition-transform duration-300 ease-in-out
-                hover:scale-105 hover:text-green-500 hover:drop-shadow-[0_0_6px_rgba(130,255,120,0.8)]"
+              className="flex items-center pl-0 pb-2.5 text-base font-sans font-medium tracking-wide text-green-200 cursor-default select-none
+                transition-all duration-300 ease-in-out
+                hover:scale-105 hover:text-dustyRose"
             >
               {icon &&
                 React.cloneElement(icon, {
